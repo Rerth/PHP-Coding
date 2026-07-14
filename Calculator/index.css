@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.7) 0%, rgba(118, 75, 162, 0.7) 100%), url('https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=1920&q=80') center/cover fixed;
+    color: #fff;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 28px;
+    padding: 80px 100px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    max-width: 800px;
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    margin: 0 0 32px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #ffffff, #e0e7ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.display-group {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.display {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.number-input {
+    flex: 1;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.number-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.number-input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+}
+
+.result-display {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4facfe;
+    background: linear-gradient(135deg, #ffffff, #d4d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.9;
+    }
+}
+
+.button-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+button {
+    padding: 16px 24px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #667eea;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.3px;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(102, 126, 234, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 45px rgba(102, 126, 234, 0.4);
+}
+
+button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+button:active {
+    transform: translateY(-2px);
+}
+
+#add-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+#add-btn:hover {
+    box-shadow: 0 15px 45px rgba(102, 126, 234, 0.5);
+}
+
+#subtract-btn {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: white;
+}
+
+#subtract-btn:hover {
+    box-shadow: 0 15px 45px rgba(245, 87, 108, 0.5);
+}
+
+#multiply-btn {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+}
+
+#multiply-btn:hover {
+    box-shadow: 0 15px 45px rgba(79, 172, 254, 0.5);
+}
+
+#divide-btn {
+    background: linear-gradient(135deg, #fa709a, #fee140);
+    color: white;
+}
+
+#divide-btn:hover {
+    box-shadow: 0 15px 45px rgba(250, 112, 154, 0.5);
+}
+
+.calculation-message {
+    margin-top: 16px;
+    font-size: 0.9rem;
+    color: #4facfe;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px);
+    font-weight: 600;
+    height: 20px;
+}
+
+.calculation-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
