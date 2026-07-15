@@ -71,6 +71,28 @@ button:active {
   transform: translateY(0);
 }
 
+.preview-box {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  background: #f8fbff;
+}
+
+.preview-box h2 {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: #1d4ed8;
+}
+
+#savedNotePreview {
+  margin: 0;
+  font-size: 13px;
+  color: #334155;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
 #status {
   margin: 12px 0 0;
   font-size: 12px;
