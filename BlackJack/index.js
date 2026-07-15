@@ -262,41 +262,56 @@ function endRound() {
   let outcome;
   let payout = 0;
 
-  if (playerTotal > 21) {
-    outcome = "Bust — you lose";
-    payout = -currentBet;
-    playerSeat.classList.add("lose");
-  } else if (dealerBJ && playerBJ) {
-    outcome = "Both blackjack — push";
-    payout = 0;
-    playerSeat.classList.add("push");
-    dealerSeat.classList.add("push");
-  } else if (playerBJ) {
-    outcome = "Blackjack! You win 3:2";
-    payout = Math.floor(currentBet * 1.5);
-    playerSeat.classList.add("win");
-  } else if (dealerBJ) {
-    outcome = "Dealer blackjack — you lose";
-    payout = -currentBet;
-    dealerSeat.classList.add("win");
-  } else if (dealerTotal > 21) {
-    outcome = "Dealer busts — you win";
-    payout = currentBet;
-    playerSeat.classList.add("win");
-  } else if (playerTotal > dealerTotal) {
-    outcome = "You win";
-    payout = currentBet;
-    playerSeat.classList.add("win");
-  } else if (playerTotal < dealerTotal) {
-    outcome = "Dealer wins";
-    payout = -currentBet;
-    dealerSeat.classList.add("win");
-  } else {
-    outcome = "Push — bet returned";
-    payout = 0;
-    playerSeat.classList.add("push");
-    dealerSeat.classList.add("push");
-  }
+if (playerTotal > 21) 
+    {
+        outcome = "Bust — you lose";
+        payout = -currentBet;
+        playerSeat.classList.add("lose");
+    } 
+else if (dealerBJ && playerBJ) 
+    {
+        outcome = "Both blackjack — push";
+        payout = 0;
+        playerSeat.classList.add("push");
+        dealerSeat.classList.add("push");
+    } 
+else if (playerBJ) 
+    {
+        outcome = "Blackjack! You win 3:2";
+        payout = Math.floor(currentBet * 1.5);
+        playerSeat.classList.add("win");
+    } 
+else if (dealerBJ) 
+    {
+        outcome = "Dealer blackjack — you lose";
+        payout = -currentBet;
+        dealerSeat.classList.add("win");
+    }
+else if (dealerTotal > 21)
+    {
+        outcome = "Dealer busts — you win";
+        payout = currentBet;
+        playerSeat.classList.add("win");
+    } 
+else if (playerTotal > dealerTotal) 
+    {
+        outcome = "You win";
+        payout = currentBet;
+        playerSeat.classList.add("win");
+    }
+else if (playerTotal < dealerTotal) 
+    {
+        outcome = "Dealer wins";
+        payout = -currentBet;
+        dealerSeat.classList.add("win");
+    } 
+else 
+    {
+        outcome = "Push — bet returned";
+        payout = 0;
+        playerSeat.classList.add("push");
+        dealerSeat.classList.add("push");
+    }
 
   bankroll += payout;
   setMessage(outcome);
