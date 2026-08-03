@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM Manipulation Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .item {
+      padding: 0.3rem 0;
+      color: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <h1>DOM Manipulation Examples</h1>
+
+  <section>
+    <h2>1. Select and Update Elements</h2>
+    <p id="message">Hello from DOM</p>
+    <button id="updateBtn">Update Text</button>
+  </section>
+
+  <section>
+    <h2>2. Create and Append Elements</h2>
+    <div id="listContainer"></div>
+    <button id="addItemBtn">Add Item</button>
+  </section>
+
+  <section>
+    <h2>3. Event Handling</h2>
+    <input id="nameInput" type="text" placeholder="Type your name" />
+    <button id="greetBtn">Greet</button>
+    <p id="greetingOutput"></p>
+  </section>
+
+  <section>
+    <h2>4. Array Methods + DOM</h2>
+    <ul id="fruitList">
+      <li>apple</li>
+      <li>banana</li>
+      <li>mango</li>
+      <li>grape</li>
+    </ul>
+    <button id="showMappedBtn">Show Uppercase Fruits</button>
+    <div id="mappedOutput"></div>
+  </section>
+
+  <script src="selectors.js"></script>
+  <script src="create-elements.js"></script>
+  <script src="events.js"></script>
+  <script src="array-methods.js"></script>
+</body>
+</html>
