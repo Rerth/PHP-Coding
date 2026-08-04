@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Validation Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+    }
+
+    form {
+      max-width: 420px;
+      margin-bottom: 2rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .error {
+      color: #b91c1c;
+      margin-top: -0.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    .success {
+      color: #166534;
+      padding: 0.75rem;
+      background: #dcfce7;
+      border: 1px solid #bbf7d0;
+      border-radius: 6px;
+      max-width: 420px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Form Validation Example</h1>
+
+  <form id="signupForm" novalidate>
+    <div>
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text" required />
+      <div class="error" id="usernameError"></div>
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required />
+      <div class="error" id="emailError"></div>
+    </div>
+
+    <div>
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required minlength="6" />
+      <div class="error" id="passwordError"></div>
+    </div>
+
+    <div>
+      <label for="confirmPassword">Confirm Password</label>
+      <input id="confirmPassword" name="confirmPassword" type="password" required />
+      <div class="error" id="confirmPasswordError"></div>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="result" class="success" aria-live="polite"></div>
+
+  <script src="helpers.js"></script>
+  <script src="validation.js"></script>
+  <script src="form-submit.js"></script>
+</body>
+</html>

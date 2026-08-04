@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6 Features in JavaScript</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2rem;
+        line-height: 1.6;
+        background: #f8fafc;
+        color: #0f172a;
+      }
+
+      .card {
+        background: white;
+        padding: 1.2rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+
+      code {
+        background: ;
+        padding: 0.15rem 0.35rem;
+        border-radius: 4px;
+        font-size: 0.95rem;
+      }
+
+      pre {
+        background: #0f172a;
+        color: #f8fafc;
+        padding: 1rem;
+        border-radius: 6px;
+        overflow-x: auto;
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ES6 Features You Should Know</h1>
+    <p>This page shows modern JavaScript writing style that is commonly used in React.</p>
+
+    <div class="card">
+      <h2>1. Let and Const</h2>
+      <pre><code>let count = 0;
+const name = 'React';
+count += 1;</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>2. Arrow Functions</h2>
+      <pre><code>const greet = (name) => `Hello, ${name}!`;
+console.log(greet('Ada'));</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>3. Template Literals</h2>
+      <pre><code>const user = 'Sam';
+const message = `Welcome ${user}`;</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>4. Destructuring</h2>
+      <pre><code>const userInfo = { name: 'Sara', age: 22 };
+const { name, age } = userInfo;</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>5. Default Parameters</h2>
+      <pre><code>const welcome = (name = 'Guest') => `Hello ${name}`;</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>6. Spread and Rest Operators</h2>
+      <pre><code>const nums = [1, 2, 3];
+const moreNums = [...nums, 4, 5];
+const sum = (...values) => values.reduce((a, b) => a + b, 0);</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>7. Import and Export</h2>
+      <pre><code>export const title = 'ES6';
+import { title } from './example.js';</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>8. Classes</h2>
+      <pre><code>class Person {
+  constructor(name) {
+    this.name = name;
+  }
+
+  greet() {
+    return `Hi, ${this.name}`;
+  }
+}</code></pre>
+    </div>
+
+    <script>
+      const count = 0;
+      const name = 'React';
+      const greet = (name) => `Hello, ${name}!`;
+      const user = 'Sam';
+      const message = `Welcome ${user}`;
+      const userInfo = { name: 'Sara', age: 22 };
+      const { name: userName, age } = userInfo;
+      const welcome = (name = 'Guest') => `Hello ${name}`;
+      const nums = [1, 2, 3];
+      const moreNums = [...nums, 4, 5];
+      const sum = (...values) => values.reduce((a, b) => a + b, 0);
+
+      console.log('Let/Const example:', count, name);
+      console.log(greet('Ada'));
+      console.log(message);
+      console.log(userName, age);
+      console.log(welcome());
+      console.log(moreNums);
+      console.log(sum(1, 2, 3, 4));
+    </script>
+  </body>
+</html>
