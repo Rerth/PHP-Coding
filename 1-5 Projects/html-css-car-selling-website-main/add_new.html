@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Car · CarFindal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body class="page-add-car">
+    <header class="navbar">
+      <div class="container navbar-content">
+        <a href="index.html" class="logo-wrapper">
+          <img src="img/logoipsum-265.svg" alt="CarFindal" />
+        </a>
+        <nav class="navbar-links">
+          <a href="index.html">Home</a>
+          <a href="s.html">Browse</a>
+          <a href="my_cars.html">My Cars</a>
+          <a href="watchlist.html">Wishlist</a>
+        </nav>
+        <div class="navbar-actions">
+          <a href="add_new.html" class="btn btn-outline">Add Car</a>
+          <a href="signup.html" class="btn btn-primary">Signup</a>
+          <a href="login.html" class="btn btn-login">Login</a>
+          <button class="btn btn-default btn-navbar-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="container">
+        <div class="card">
+          <div class="flex items-center justify-between mb-medium">
+            <div>
+              <p class="eyebrow">Sell your car</p>
+              <h1 class="car-details-page-title">Add a new listing</h1>
+            </div>
+          </div>
+
+          <form action="" method="POST" enctype="multipart/form-data" class="add-new-car-form">
+            <div class="grid grid-cols-3 gap-1">
+              <div class="form-group">
+                <label>Maker</label>
+                <select>
+                  <option value="">Choose Maker</option>
+                  <option>BMW</option>
+                  <option>Lexus</option>
+                  <option>Mercedes</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Model</label>
+                <input type="text" placeholder="Enter model" />
+              </div>
+              <div class="form-group">
+                <label>Year</label>
+                <select>
+                  <option value="">Choose Year</option>
+                  <option>2024</option>
+                  <option>2023</option>
+                  <option>2022</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-1">
+              <div class="form-group">
+                <label>Price</label>
+                <input type="number" placeholder="Price" />
+              </div>
+              <div class="form-group">
+                <label>Mileage</label>
+                <input type="number" placeholder="Mileage" />
+              </div>
+              <div class="form-group">
+                <label>VIN Code</label>
+                <input type="text" placeholder="Vehicle Identification" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Fuel Type</label>
+              <div class="grid grid-cols-3 gap-1">
+                <label class="inline-radio"><input type="radio" name="fuel" /> Gasoline</label>
+                <label class="inline-radio"><input type="radio" name="fuel" /> Hybrid</label>
+                <label class="inline-radio"><input type="radio" name="fuel" /> Electric</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Upload photos</label>
+              <input id="carFormImageUpload" type="file" name="images[]" multiple accept="image/*" />
+            </div>
+
+            <div id="imagePreviews" class="car-form-images grid grid-cols-4 gap-1"></div>
+
+            <div class="hero-actions">
+              <button type="submit" class="btn btn-primary">Save listing</button>
+              <a href="my_cars.html" class="btn btn-outline">Back to listings</a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>CarFindal Service © 2026 · Modern responsive car marketplace.</p>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="s.html">Search</a>
+          <a href="add_new.html">Add Car</a>
+          <a href="login.html">Login</a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>

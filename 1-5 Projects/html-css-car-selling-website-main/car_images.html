@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Car Images · CarFindal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body class="page-manage-images">
+    <header class="navbar">
+      <div class="container navbar-content">
+        <a href="index.html" class="logo-wrapper">
+          <img src="img/logoipsum-265.svg" alt="CarFindal" />
+        </a>
+        <nav class="navbar-links">
+          <a href="index.html">Home</a>
+          <a href="s.html">Browse</a>
+          <a href="my_cars.html">My Cars</a>
+          <a href="watchlist.html">Wishlist</a>
+        </nav>
+        <div class="navbar-actions">
+          <a href="add_new.html" class="btn btn-outline">Add Car</a>
+          <a href="signup.html" class="btn btn-primary">Signup</a>
+          <a href="login.html" class="btn btn-login">Login</a>
+          <button class="btn btn-default btn-navbar-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="container">
+        <div class="card">
+          <div class="flex items-center justify-between mb-medium">
+            <div>
+              <p class="eyebrow">Listing assets</p>
+              <h1 class="car-details-page-title">Manage images for Lexus NX200t</h1>
+            </div>
+          </div>
+
+          <div class="form-update-images">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Remove</th>
+                    <th>Preview</th>
+                    <th>Order</th>
+                  </tr>
+                </thead>
+                <tbody>
+                                    <tr>
+                    <td><input type="checkbox" name="delete_images[]" value="1" /></td>
+                    <td><img src="img/cars/Lexus-RX200t-2016/1.jpeg" alt="Photo 1" class="my-cars-img-thumbnail" /></td>
+                    <td><input type="number" value="1" min="1" style="width:80px" /></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="delete_images[]" value="2" /></td>
+                    <td><img src="img/cars/Lexus-RX200t-2016/2.jpeg" alt="Photo 2" class="my-cars-img-thumbnail" /></td>
+                    <td><input type="number" value="2" min="1" style="width:80px" /></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="delete_images[]" value="3" /></td>
+                    <td><img src="img/cars/Lexus-RX200t-2016/3.jpeg" alt="Photo 3" class="my-cars-img-thumbnail" /></td>
+                    <td><input type="number" value="3" min="1" style="width:80px" /></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="delete_images[]" value="4" /></td>
+                    <td><img src="img/cars/Lexus-RX200t-2016/4.jpeg" alt="Photo 4" class="my-cars-img-thumbnail" /></td>
+                    <td><input type="number" value="4" min="1" style="width:80px" /></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="hero-actions">
+              <button class="btn btn-primary">Update selection</button>
+            </div>
+          </div>
+
+          <form action="" method="POST" enctype="multipart/form-data" class="form-images">
+            <div class="form-group">
+              <label>Upload new images</label>
+              <input id="carFormImageUpload" type="file" name="images[]" multiple accept="image/*" />
+            </div>
+            <div id="imagePreviews" class="car-form-images grid grid-cols-4 gap-1"></div>
+            <div class="hero-actions">
+              <button class="btn btn-primary">Add Images</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>CarFindal Service © 2026 · Modern responsive car marketplace.</p>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="s.html">Search</a>
+          <a href="add_new.html">Add Car</a>
+          <a href="login.html">Login</a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>

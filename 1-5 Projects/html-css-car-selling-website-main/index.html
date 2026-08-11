@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CarFindal · Buy & Sell Cars</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body class="page-home">
+    <header class="navbar">
+      <div class="container navbar-content">
+        <a href="index.html" class="logo-wrapper">
+          <img src="img/logoipsum-265.svg" alt="CarFindal" />
+        </a>
+        <nav class="navbar-links">
+          <a href="index.html">Home</a>
+          <a href="s.html">Browse</a>
+          <a href="my_cars.html">My Cars</a>
+          <a href="watchlist.html">Wishlist</a>
+        </nav>
+        <div class="navbar-actions">
+          <a href="add_new.html" class="btn btn-outline">Add Car</a>
+          <a href="signup.html" class="btn btn-primary">Signup</a>
+          <a href="login.html" class="btn btn-login">Login</a>
+          <button class="btn btn-default btn-navbar-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero-slider">
+        <div class="hero-slides">
+          <div class="hero-slide active">
+            <div class="slide-content">
+              <p class="eyebrow">Discover your next ride</p>
+              <h1 class="hero-slider-title">Buy, Sell and Explore premium cars with confidence.</h1>
+              <p class="hero-slider-content">Search by brand, model, year, price and more. Every listing is curated for reliability and style.</p>
+              <div class="hero-actions">
+                <a href="s.html" class="btn btn-primary">Start browsing</a>
+                <a href="add_new.html" class="btn btn-outline">List a car</a>
+              </div>
+            </div>
+            <div class="slide-image">
+              <img src="img/car-png-39071.png" alt="Car showcase" />
+            </div>
+          </div>
+          <div class="hero-slide">
+            <div class="slide-content">
+              <p class="eyebrow">Sell quickly</p>
+              <h1 class="hero-slider-title">Attract more buyers with beautiful car listings.</h1>
+              <p class="hero-slider-content">Upload photos, describe your vehicle, and manage your offers with ease.</p>
+              <div class="hero-actions">
+                <a href="add_new.html" class="btn btn-primary">Add your car</a>
+                <a href="login.html" class="btn btn-outline">Login to manage</a>
+              </div>
+            </div>
+            <div class="slide-image">
+              <img src="img/car-png-39071.png" alt="Sell a car" />
+            </div>
+          </div>
+          <button type="button" class="hero-slide-prev" aria-label="Previous slide">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button type="button" class="hero-slide-next" aria-label="Next slide">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="find-a-car">
+        <div class="container card">
+          <h2>Find your perfect car</h2>
+          <form action="s.html" method="GET" class="find-a-car-form">
+            <div class="find-a-car-inputs">
+              <div class="form-group">
+                <label for="makerSelect">Maker</label>
+                <select id="makerSelect" name="maker_id">
+                  <option value="">Any Maker</option>
+                  <option>Chevrolet</option>
+                  <option>Ford</option>
+                  <option>Honda</option>
+                  <option>Lexus</option>
+                  <option>Nissan</option>
+                  <option>Toyota</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="modelSelect">Model</label>
+                <select id="modelSelect" name="model_id">
+                  <option value="">Any Model</option>
+                  <option value="370Z" data-parent="Nissan">370Z</option>
+                  <option value="4Runner" data-parent="Toyota">4Runner</option>
+                  <option value="Accord" data-parent="Honda">Accord</option>
+                  <option value="RX200t" data-parent="Lexus">RX200t</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="priceRange">Max price</label>
+                <select id="priceRange" name="price_range">
+                  <option value="">Any Price</option>
+                  <option value="25000">$25,000</option>
+                  <option value="40000">$40,000</option>
+                  <option value="60000">$60,000</option>
+                  <option value="100000">$100,000</option>
+                </select>
+              </div>
+            </div>
+            <div class="hero-actions">
+              <button type="submit" class="btn btn-primary">Search cars</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="container content-panel">
+        <div class="grid grid-cols-3 gap-1"> 
+          <article class="card">
+            <h3>Wide selection</h3>
+            <p>Browse hundreds of verified cars from top brands and trusted sellers.</p>
+          </article>
+          <article class="card">
+            <h3>Easy management</h3>
+            <p>List your car fast with smart forms and manage your inventory with a click.</p>
+          </article>
+          <article class="card">
+            <h3>Secure offers</h3>
+            <p>Keep your deals transparent with clear pricing and seller contacts.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>CarFindal Service © 2026 · Modern responsive car marketplace.</p>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="s.html">Search</a>
+          <a href="add_new.html">Add Car</a>
+          <a href="login.html">Login</a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>
